@@ -3,16 +3,15 @@
 # Output: Total bill amount
 
 units = int(input("Enter units: "))
-i = 0
 bill = 0
 
-while i < units:
-    if i < 100:
-        bill += 5
-    elif i < 200:
-        bill += 7
-    else:
-        bill += 10
-    i += 1
+if units <= 100:
+    bill = units * 5
+
+elif units <= 200:
+    bill = (100 * 5) + (units - 100) * 7
+
+else:
+    bill = (100 * 5) + (100 * 7) + (units - 200) * 10
 
 print("Total Bill:", bill)
