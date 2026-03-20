@@ -12,7 +12,9 @@ def classify(num):
         else:
             print("Odd")
 
-arr = list(map(int, input("Enter numbers: ").split()))
 
-for num in arr:
+n = int(input("How many numbers? "))
+
+for i in range(n):
+    num = int(input("Enter number: "))
     classify(num)
